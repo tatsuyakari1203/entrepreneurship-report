@@ -227,3 +227,4 @@ Thumbs.db
 *.swo
 *#
 .#*
+.env
