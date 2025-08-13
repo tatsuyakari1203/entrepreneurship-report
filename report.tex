@@ -32,14 +32,15 @@
 % https://github.com/MartinScharrer/standalone
 
 % Configurations
-\coursename{Course name h}
-\reporttype{Report type h}
-\title{Report title h}
-\advisor{& Advisor h &}
+\coursename{Entrepreneurship}
+\reporttype{Final Project Report}
+\title{CogniMind - Your Personal AI Study Buddy}
+\advisor{& Dr. Đặng Thương Huyền &}
 \stuname{%
-  & Student 1 & ID 1 \\
-  & Student 2 & ID 2 \\
-  & Student 3 & ID 3 \\
+  & NGUYỄN LÊ THANH HÀO & 1952242 \\
+  & TRẦN QUỐC DUY & 1952214 \\
+  & CHÂU VĨNH AN & 1952008 \\
+  & NGUYỄN TRUNG HIẾU & 1911153 \\
 }
 
 % Allow page breaks inside align* environment
@@ -83,45 +84,23 @@
 \lstlistoflistings{}
 
 \clearpage
-\section{Normal section}
-This is how you normally work with \LaTeX, but you can also split a project into smaller files for easier management.
-To import other files, you can use \mintinline{latex}{\input{}} or \mintinline{latex}{\include{}}.
-There differences can be found at \url{https://tex.stackexchange.com/a/250}, but in short
+\section{Introduction}
+% Add your introduction content here
 
-\begin{center}
-  \mintinline{latex}{\include{filename}} = \mintinline{latex}{\clearpage \input{filename} \clearpage}
-\end{center}
+\section{Literature Review}
+% Add your literature review content here
 
-\section{Label prefixes}
-There are no definite rules for label prefixes, but you can use the following as a guideline.
-\begin{itemize}
-  \item \textbf{chap:} for chapters
-  \item \textbf{sec:} for sections
-  \item \textbf{subsec:} for subsections
-  \item \textbf{eq:} for equations
-  \item \textbf{fig:} for figures
-  \item \textbf{tab:} for tables
-  \item \textbf{enum:} for enumerators and items
-  \item \textbf{fn:} for footnotes
-  \item \textbf{lst:} for listings
-  \item \textbf{alg:} for algorithms
-  \item \textbf{app:} for appendices
-\end{itemize}
+\section{Methodology}
+% Add your methodology content here
 
-The \mintinline{latex}{\caption} macro increases the used counter and sets the current label text which is used by \mintinline{latex}{\label}.
-If you use \mintinline{latex}{\label} before it the old label text is used instead, which leads to a wrong number.
-Always use \mintinline{latex}{\label} after \mintinline{latex}{\caption} and not before or in it.
+\section{Results and Discussion}
+% Add your results and discussion content here
 
-That said, conventions are just conventions, and you can use whatever you want as long as you are consistent.
-
-\clearpage
-\input{chapters/example/better-tables.tex}
-\input{chapters/example/better-enum.tex}
-\include{chapters/example/codespace.tex}
-\include{chapters/example/figwidth.tex}
+\section{Conclusion}
+% Add your conclusion content here
 
 \bibliographystyle{plain}
-\bibliography{refs/example.bib}
+\bibliography{refs/refs}
 \nocite{*}
 
 \end{document}

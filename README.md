@@ -1,6 +1,6 @@
-# HCMUT Report Template
+# CogniMind - Your Personal AI Study Buddy
 
-A LaTeX template for academic reports at Ho Chi Minh City University of Technology (HCMUT), Vietnam National University Ho Chi Minh City.
+Entrepreneurship Final Project Report - A LaTeX template for academic reports at Ho Chi Minh City University of Technology (HCMUT), Vietnam National University Ho Chi Minh City.
 
 ## Repository Information
 
@@ -12,23 +12,18 @@ A LaTeX template for academic reports at Ho Chi Minh City University of Technolo
 
 ```
 entrepreneurship-report/
-├── LICENSE.txt              # License file
-├── README.md               # This documentation
-├── report.tex              # Main LaTeX document
-├── hcmut-report.cls        # Custom document class
-├── codespace.sty           # Custom package for code formatting
-├── chapters/               # Chapter files directory
-│   └── example/           # Example chapters
-│       ├── better-enum.tex
-│       ├── better-tables.tex
-│       ├── codespace.tex
-│       └── figwidth.tex
-├── code/                   # Source code directory
-│   └── example.py
-├── graphics/               # Images and graphics
-│   └── hcmut.png          # HCMUT logo
-└── refs/                   # Bibliography files
-    └── example.bib
+├── .gitignore              # Git ignore file for LaTeX temporary files
+├── LICENSE.txt             # License file
+├── README.md              # This documentation file
+├── report.tex             # Main LaTeX document
+├── hcmut-report.cls       # Custom document class
+├── codespace.sty          # Custom package for code formatting
+├── chapters/              # Chapter files directory (ready for your content)
+├── code/                  # Source code directory (ready for your code)
+├── graphics/              # Images and figures
+│   └── hcmut.png         # University logo
+└── refs/                  # Bibliography files
+    └── refs.bib          # Bibliography file for references
 ```
 
 ## Features
@@ -72,13 +67,15 @@ The template includes comprehensive examples:
 1. **Clone or download** this template
 2. **Edit the main document** (`report.tex`):
    ```latex
-   \coursename{Your Course Name}
-   \reporttype{Your Report Type}
-   \title{Your Report Title}
-   \advisor{& Your Advisor Name &}
+   \coursename{Entrepreneurship}
+   \reporttype{Final Project Report}
+   \title{CogniMind - Your Personal AI Study Buddy}
+   \advisor{& Dr. Đặng Thương Huyền &}
    \stuname{%
-     & Student Name 1 & Student ID 1 \\
-     & Student Name 2 & Student ID 2 \\
+     & NGUYỄN LÊ THANH HÀO & 1952242 \\
+     & TRẦN QUỐC DUY & 1952214 \\
+     & CHÂU VĨNH AN & 1952008 \\
+     & NGUYỄN TRUNG HIẾU & 1911153 \\
    }
    ```
 
@@ -217,7 +214,7 @@ Use `booktabs` for professional-looking tables:
 
 ### Bibliography Management
 
-1. **Add references** to `refs/example.bib`:
+1. **Add references** to `refs/refs.bib`:
    ```bibtex
    @article{example2023,
      title={Example Article},
@@ -232,7 +229,7 @@ Use `booktabs` for professional-looking tables:
 3. **Include bibliography**:
    ```latex
    \bibliographystyle{plain}
-   \bibliography{refs/example.bib}
+   \bibliography{refs/refs}
    ```
 
 ## Customization
