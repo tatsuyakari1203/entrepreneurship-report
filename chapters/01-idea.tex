@@ -42,35 +42,3 @@ painstaking detail every nuances; the scale of which is a state-sponsored projec
 nature as a token (i.e., morpheme, loosely) predictor) By focusing strictly on STEM subjects where there is,
 a "universal truth", we can prevent misinformation on factual subjects that can distort a student's view, especially on
 sensitive topics.
-
-\section{Feasibility}
-
-\subsection{Technology}
-\subsubsection{GUI}
-Notetaking app is an idea that has been done to death, as such, it is highly feasible. To cut down on
- iteration time, we opt to use React Native (\url{https://reactnative.dev}) to be our Graphical User Interface
- (GUI) framework. Based on the well-known web UI framework React with minor changes, coupled with extensive open-source
- component library, we can cut down on time-to-MVP while simultaneously provide an interface in the browser or
- Electron-based web apps without suffering from parallel technology stacks.
-
-\subsubsection{LLMs}
-The core technology behind the AI half of our notetaking app are the LLMs. We choose to roll with
- Google's Gemini with possibility to expand to other providers such at OpenAI's GPT-* models. Both companies provide
- API to interact with their LLMs under pay-as-you-go pricing model allowing for flexibility in cost. Furthermore,
- having access to APIs allows us to tweak the system prompt (i.e., personality, tone of speech, etc.) according to our
- need rather than being confined to the defaults. In addition, LLMs are no longer confined to text, they can
- participate in agentic workflow, which we need to tailor the responses according to our and our customers' needs.
-
-\subsubsection{Input text}
-Aiming for K-12 students, a thorny challenge is the acquisition of textbooks for refining
- which is copyright. While the concepts being introduced in the textbooks are not copyrightable, the ways the concepts
- are introduced are under the so-called Idea-Expression Dichotomy. To avoid copyright issues, we opt to use a method
- similar to a clean room implementation: One person will be reading through standard issue MoET textbooks, noting down
- the concepts being introduced and systemise them into a "skeleton"; another person will use reference other material
- to repopulate and refine the skeleton into a so-called "graph of knowledge". Using this method, we can leverage the
- existing "knowledge" embedded in the LLM itself while adding guard rails to prevent leakage of "higher knowledge",
- i.e., \textbf{not} introducing trigonometry in guiding a user who has only learnt Pythagorean Theorem, etc. 
-
- In later revisions, this can be expanded to include actual sample problems and solutions curated and created in-house
- to further nudge the LLM into following the expected baseline method, with human-in-the-loop refinement through
- collaboration with human field experts (teachers, lecturers, etc.) to further enhance the LLM's response.
