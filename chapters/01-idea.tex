@@ -1,0 +1,76 @@
+\def\code#1{\texttt{#1}}
+
+\section{Ideation}
+We are in the middle of a paradigm shift of how we interact with computers, language, and
+ information. The current so-called "AI Revolution" can have its origin traced back to late 2016-early 2017 when "AI"
+ (as we refer today) was able to synthesise new data as deepfakes, no longer limited to mere classification. As
+ deepfake matures, the world started to ponder: If deepfakes are possible, can we push this generative into other
+ domains? After a brief period of silent refinement and research came the answer: A resounding yes. GPT-1 debutted in
+ 2018, followed by GPT-2 in 2019; finally culminated into the start of the "AI Revolution", GPT-3, colloquially known
+ as "ChatGPT".
+
+The world took notice very quickly. GPT-3 and later models excelled at natural language processing (NLP), generating
+responses the likes of Cleverbot could never hoped to match. But, a sword to protect is also a sword for violence, as
+AI-based cheating became more and more prolific amongst student. Why bother labouring away at assignments when you
+could ask to "please generate an essay on \$\{a topic\}"? An arms race have begun: Students who wanted a quick way out,
+and educators who wanted to curb the rampant low-effort submissions. Pandora's Box had been opened, there was no going
+back. There was only more education on how to wield AI as a tool, which got us thinking.
+
+LLMs' strength lies in NLP, i.e., its ability to crunch through hundreds of pages of text, teasing out details, and
+based on its training with sufficient guidance (i.e., prompting), could help a well-trained individual to cut down on
+time needed to meaningfully parse through a document. Examples of this can be seen in the existence of numerous AI
+academic research aids: The LLM with their tools will blast through a research question, finding the relevant papers,
+distill them down to answer the question, and leave it for the human to judge whether the material found is suitable
+for their current objective. It is this abililty to aid humans that we wanted to harness.
+
+Key words: "well-trained individual". What about the not well-trained? We have seen in the past tools such as PhotoMath,
+WolframAlpha being used to solve a problem for a student to copy down and call it done. As far as the education system
+is concerned, you have proved your ability to solve a problem, but as far as your brain is concerned, you have not
+learnt anything. And as digital note-taking become more or more prevalent in K-12, not just as college/university
+students, we wanted to let AI empower K-12 and university students of STEM fields, in much the same way AI is
+empowering academia.
+
+We would like to propose: "\textbf{CogniMind}, a notebook note-taking app, with AI features tailored towards students".
+We want to achieve this by purposefully restricting the LLM's capability into 3 stages: Priming the user with hints on
+required knowledge; Socratic questioning to guide the user through; and full solution. The goal is for the user to
+connect the dots themselves, rather than spoonfeeding.
+
+Our startup will \textbf{strictly focus on STEM subjects}. The law of physics is the same regardless of countries,
+whereas culture can differ wildly from one region to the next, sometimes within the same country. An LLM would need a
+full-scale anthropology research project culminating into thousands upon thousands of pages of text describing in
+painstaking detail every nuances; the scale of which is a state-sponsored project. As LLMs can hallucinate(this is by
+nature as a token (i.e., morpheme, loosely) predictor) By focusing strictly on STEM subjects where there is,
+a "universal truth", we can prevent misinformation on factual subjects that can distort a student's view, especially on
+sensitive topics.
+
+\section{Feasibility}
+
+\subsection{Technology}
+\subsubsection{GUI}
+Notetaking app is an idea that has been done to death, as such, it is highly feasible. To cut down on
+ iteration time, we opt to use React Native (\url{https://reactnative.dev}) to be our Graphical User Interface
+ (GUI) framework. Based on the well-known web UI framework React with minor changes, coupled with extensive open-source
+ component library, we can cut down on time-to-MVP while simultaneously provide an interface in the browser or
+ Electron-based web apps without suffering from parallel technology stacks.
+
+\subsubsection{LLMs}
+The core technology behind the AI half of our notetaking app are the LLMs. We choose to roll with
+ Google's Gemini with possibility to expand to other providers such at OpenAI's GPT-* models. Both companies provide
+ API to interact with their LLMs under pay-as-you-go pricing model allowing for flexibility in cost. Furthermore,
+ having access to APIs allows us to tweak the system prompt (i.e., personality, tone of speech, etc.) according to our
+ need rather than being confined to the defaults. In addition, LLMs are no longer confined to text, they can
+ participate in agentic workflow, which we need to tailor the responses according to our and our customers' needs.
+
+\subsubsection{Input text}
+Aiming for K-12 students, a thorny challenge is the acquisition of textbooks for refining
+ which is copyright. While the concepts being introduced in the textbooks are not copyrightable, the ways the concepts
+ are introduced are under the so-called Idea-Expression Dichotomy. To avoid copyright issues, we opt to use a method
+ similar to a clean room implementation: One person will be reading through standard issue MoET textbooks, noting down
+ the concepts being introduced and systemise them into a "skeleton"; another person will use reference other material
+ to repopulate and refine the skeleton into a so-called "graph of knowledge". Using this method, we can leverage the
+ existing "knowledge" embedded in the LLM itself while adding guard rails to prevent leakage of "higher knowledge",
+ i.e., \textbf{not} introducing trigonometry in guiding a user who has only learnt Pythagorean Theorem, etc. 
+
+ In later revisions, this can be expanded to include actual sample problems and solutions curated and created in-house
+ to further nudge the LLM into following the expected baseline method, with human-in-the-loop refinement through
+ collaboration with human field experts (teachers, lecturers, etc.) to further enhance the LLM's response.

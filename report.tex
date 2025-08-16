@@ -31,6 +31,15 @@
 % Sub-preambles
 % https://github.com/MartinScharrer/standalone
 
+% Hyperlinks
+\usepackage{hyperref}
+
+% Tell LaTeX to number down to the \subparagraph level (level 5)
+\setcounter{secnumdepth}{5}
+
+% Tell LaTeX to include entries in the ToC down to the \subparagraph level
+\setcounter{tocdepth}{5}
+
 % Configurations
 \coursename{Entrepreneurship}
 \reporttype{Final Project Report}
@@ -84,45 +93,13 @@
 % \lstlistoflistings{}
 
 \clearpage
-\section{Ideation \& Feasibility}
-\subsection {Ideation}
-We are in the middle of a paradigm shift of how we interact with computers, language, and information. The current 
-so-called "AI Revolution" can have its origin traced back to late 2016-early 2017 when now-suspended Reddit user 
-u/deepfakes and their corresponding now-defunct r/deepfakes showed to the world that what we now refers to as "AI" was
-able to synthesise new data, not just 
-
-\subsection {Feasibility}
-\{TBA\}
-
-
-\clearpage
-\section{Market Analysis}
-
-\{TBA\}
-
-\clearpage
-\section{Target Market}
-\{TBA\}
-
-\clearpage
-\section{Competition Analysis}
-\{TBA\}
-
-\clearpage
-\section{Business Model}
-\{TBA\}
-
-\clearpage
-\section{New-venture Team}
-\{TBA\}
-
-\clearpage
-\section{Growth Strategy}
-\{TBA\}
-
-\clearpage
-\section{Financial Outlook}
-\{TBA\}
+\include{chapters/01-idea}
+\include{chapters/02-market_ana}
+\include{chapters/03-competition_ana}
+\include{chapters/04-business_model}
+\include{chapters/05-venture_team}
+\include{chapters/06-growth_strategy}
+\include{chapters/07-financial_outlook}
 
 \bibliographystyle{plain}
 \bibliography{refs/refs}
