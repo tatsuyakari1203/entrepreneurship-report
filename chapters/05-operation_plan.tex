@@ -1,128 +1,158 @@
 \section{Operation Plan}
 
 \subsection{Operational Workflow}
-% TODO: Sơ đồ quy trình các hoạt động chính
-\textbf{Key Process Flowchart:}
-\begin{itemize}
-    \item \textbf{Product Development:}
-    \begin{enumerate}
-        \item \{TBA - Requirements gathering\}
-        \item \{TBA - Design and prototyping\}
-        \item \{TBA - Development and testing\}
-        \item \{TBA - Deployment and monitoring\}
-    \end{enumerate}
-    \item \textbf{Service Delivery:}
-    \begin{enumerate}
-        \item \{TBA - User onboarding\}
-        \item \{TBA - AI tutoring service\}
-        \item \{TBA - Progress tracking\}
-        \item \{TBA - Performance optimization\}
-    \end{enumerate}
-    \item \textbf{Customer Support:}
-    \begin{enumerate}
-        \item \{TBA - Issue identification\}
-        \item \{TBA - Support ticket handling\}
-        \item \{TBA - Resolution and follow-up\}
-    \end{enumerate}
-\end{itemize}
+
+CogniMind's operational plan is designed to ensure flexibility, efficiency, and scalability by applying modern methodologies in product development and service management. We adopt an Agile model combined with DevOps to optimize the product and service lifecycle.
+
+\subsubsection{Product Development Lifecycle}
+
+Our product development follows a structured approach with continuous feedback integration:
+
+\begin{enumerate}
+    \item \textbf{Requirement Gathering:} Continuously collect user feedback through surveys, interviews, and behavioral data analysis. The strategy team researches market trends and educational developments to identify priority features.
+    
+    \item \textbf{Design \& Prototyping:} The UX/UI team creates wireframes and interactive prototypes. Simultaneously, the AI team designs and tests prompt structures and workflows for Large Language Models (LLMs).
+    
+    \item \textbf{Development \& QA:} Products are developed in short cycles (2-week sprints). After each sprint, the QA team conducts comprehensive testing, from unit tests and integration tests to user acceptance testing (UAT) to ensure quality.
+    
+    \item \textbf{Deployment \& Monitoring:} We use CI/CD (Continuous Integration/Continuous Deployment) processes to automate new version deployments. Performance and error monitoring systems operate 24/7 to detect and resolve issues promptly.
+\end{enumerate}
+
+\subsubsection{Service Delivery Process}
+
+Our service delivery is optimized for user experience and educational effectiveness:
+
+\begin{enumerate}
+    \item \textbf{User Onboarding:} The registration process is streamlined. New users receive a brief tour of key features to start using the platform immediately.
+    
+    \item \textbf{Core Service (AI Tutoring):} When users submit requests, the system processes them through a complex AI workflow to generate pedagogically sound suggestions and explanations, ensuring accuracy and appropriateness for the learner's level.
+    
+    \item \textbf{Tracking \& Analytics:} The system collects anonymized data about the learning process, helping users track their progress and helping CogniMind better understand user behavior for product improvement.
+\end{enumerate}
+
+\subsubsection{Customer Support Process}
+
+We maintain high-quality customer support through multiple channels:
+
+\begin{enumerate}
+    \item \textbf{Reception:} Users can submit support requests via email, integrated chatbot, and social media channels.
+    
+    \item \textbf{Classification \& Processing:} Requests are automatically categorized (technical issues, payment questions, feature suggestions) and routed to appropriate departments. Our support team commits to responding within 24 hours.
+    
+    \item \textbf{Resolution \& Improvement:} After resolving issues, feedback and bug reports are compiled and added to the product development backlog for improvement in future versions.
+\end{enumerate}
 
 \subsection{Technology and Equipment}
-% Nội dung được di chuyển và mở rộng từ phần Resource trong chương Feasibility
+
+CogniMind's technology platform is built on modern frameworks with high scalability and cost optimization capabilities.
+
 \subsubsection{GUI Framework}
-Notetaking app is an idea that has been done to death, as such, it is highly feasible. To cut down on
- iteration time, we opt to use React Native (\url{https://reactnative.dev}) to be our Graphical User Interface
- (GUI) framework. Based on the well-known web UI framework React with minor changes, coupled with extensive open-source
- component library, we can cut down on time-to-MVP while simultaneously provide an interface in the browser or
- Electron-based web apps without suffering from parallel technology stacks.
+\textbf{React Native:} Chosen as the primary framework for application development. The main advantage is the ability to build applications for both iOS and Android from a single codebase, significantly saving development time and costs. The rich component ecosystem and strong community support are also major benefits.
 
 \subsubsection{LLMs Infrastructure}
-The core technology behind the AI half of our notetaking app are the LLMs. We choose to roll with
- Google's Gemini with possibility to expand to other providers such at OpenAI's GPT-* models. Both companies provide
- API to interact with their LLMs under pay-as-you-go pricing model allowing for flexibility in cost. Furthermore,
- having access to APIs allows us to tweak the system prompt (i.e., personality, tone of speech, etc.) according to our
- need rather than being confined to the defaults. In addition, LLMs are no longer confined to text, they can
- participate in agentic workflow, which we need to tailor the responses according to our and our customers' needs.
+\begin{itemize}
+    \item \textbf{Core Engine:} Using \textbf{Google Gemini API} (e.g., Gemini 1.5 Pro) as the main AI engine due to its multimodal processing capabilities, large context window, and optimal performance.
+    \item \textbf{Backup \& Alternative:} \textbf{OpenAI GPT-4 Series} will be used as a backup model and for comparison, ensuring service continuity.
+    \item \textbf{Architecture:} We build a proprietary \textbf{Agentic Workflow} that allows AI to automatically perform a series of reasoning steps, retrieve knowledge from RAG database, and self-verify answers before providing suggestions to users.
+\end{itemize}
 
-\subsubsection{Content Development}
-Aiming for K-12 students, a thorny challenge is the acquisition of textbooks for refining
- which is copyright. While the concepts being introduced in the textbooks are not copyrightable, the ways the concepts
- are introduced are under the so-called Idea-Expression Dichotomy. To avoid copyright issues, we opt to use a method
- similar to a clean room implementation: One person will be reading through standard issue MoET textbooks, noting down
- the concepts being introduced and systemise them into a "skeleton"; another person will use reference other material
- to repopulate and refine the skeleton into a so-called "graph of knowledge". Using this method, we can leverage the
- existing "knowledge" embedded in the LLM itself while adding guard rails to prevent leakage of "higher knowledge",
- i.e., \textbf{not} introducing trigonometry in guiding a user who has only learnt Pythagorean Theorem, etc. 
+\subsubsection{Content \& Data Development}
+\textbf{Clean Room Implementation:} To avoid any copyright issues, we do not directly copy content from textbooks. Instead, we analyze the curriculum structure of the Ministry of Education and Training to build a "knowledge skeleton."
 
- In later revisions, this can be expanded to include actual sample problems and solutions curated and created in-house
- to further nudge the LLM into following the expected baseline method, with human-in-the-loop refinement through
- collaboration with human field experts (teachers, lecturers, etc.) to further enhance the LLM's response.
+\textbf{Knowledge Graph:} From this skeleton, our expert team will independently build examples, exercise types, and detailed solutions. This data is structured into a knowledge graph, helping AI efficiently retrieve and link information.
+
+\textbf{Human-in-the-Loop:} All AI-generated content will be reviewed and refined by our team of teachers and subject experts to ensure accuracy, appropriateness, and pedagogical value.
 
 \subsubsection{Additional Technology Requirements}
-% TODO: Bổ sung các công nghệ và thiết bị cần thiết khác
 \textbf{Development Tools:}
 \begin{itemize}
-    \item \{TBA - IDE và development environment\}
-    \item \{TBA - Version control system (Git)\}
-    \item \{TBA - CI/CD pipeline\}
-    \item \{TBA - Testing frameworks\}
+    \item \textbf{IDE:} Visual Studio Code with React Native extensions for cross-platform development
+    \item \textbf{Version Control:} Git with GitHub for collaborative development and code management
+    \item \textbf{CI/CD Pipeline:} GitHub Actions for automated testing, building, and deployment
+    \item \textbf{Testing Frameworks:} Jest for unit testing, Detox for end-to-end testing
 \end{itemize}
 
 \textbf{Infrastructure:}
 \begin{itemize}
-    \item \{TBA - Cloud hosting (AWS/GCP/Azure)\}
-    \item \{TBA - Database systems\}
-    \item \{TBA - CDN for content delivery\}
-    \item \{TBA - Monitoring and analytics tools\}
+    \item \textbf{Cloud Hosting:} Google Cloud Platform (GCP) for seamless integration with Gemini API and auto-scaling capabilities
+    \item \textbf{Database Systems:} PostgreSQL for structured data (user profiles, payments) and Pinecone for vector database (RAG system)
+    \item \textbf{CDN:} Cloudflare for global content delivery and performance optimization
+    \item \textbf{Monitoring:} Google Cloud Monitoring and Analytics for system performance tracking
 \end{itemize}
 
 \textbf{Security:}
 \begin{itemize}
-    \item \{TBA - Data encryption\}
-    \item \{TBA - User authentication systems\}
-    \item \{TBA - Privacy compliance tools\}
+    \item \textbf{Data Encryption:} AES-256 encryption for data at rest and TLS 1.3 for data in transit
+    \item \textbf{Authentication:} OAuth 2.0 and JWT tokens for secure user authentication
+    \item \textbf{Privacy Compliance:} GDPR and local privacy regulation compliance tools and procedures
 \end{itemize}
 
 \subsection{Location}
-% TODO: Mô tả văn phòng, nhà máy hoặc cơ sở vật chất
-\textbf{Physical Facilities:}
+
+\subsubsection{Main Office}
+\textbf{Primary Location:} Located in \textbf{Ho Chi Minh City}, potentially in a modern co-working space such as WeWork or Dreamplex in District 1, District 2, or near the High-Tech Park (Thu Duc City) for easy access to high-quality technology talent from universities.
+
+\subsubsection{Work Model}
+\textbf{Hybrid Approach:} We adopt a flexible \textbf{Hybrid work model (3 days in office, 2 days remote)} to attract talent nationwide, increase employee satisfaction, and optimize operational costs.
+
+\textbf{Benefits of Our Location Strategy:}
 \begin{itemize}
-    \item \{TBA - Office location and setup\}
-    \item \{TBA - Remote work capabilities\}
-    \item \{TBA - Meeting and collaboration spaces\}
-    \item \{TBA - Equipment and hardware requirements\}
+    \item Access to top-tier technology talent from leading universities
+    \item Proximity to the startup ecosystem and potential partners
+    \item Cost-effective compared to traditional office leasing
+    \item Flexibility to scale up or down based on team growth
+    \item Enhanced work-life balance for team members
+\end{itemize}
+
+\subsubsection{Remote Work Infrastructure}
+\begin{itemize}
+    \item Cloud-based development and collaboration tools
+    \item Secure VPN access for remote team members
+    \item Regular virtual meetings and team building activities
+    \item Flexible working hours to accommodate different time zones
 \end{itemize}
 
 \subsection{Supply Chain and Partner Management}
-% TODO: Nhà cung cấp chính và đối tác chiến lược
-\textbf{Key Suppliers:}
+
+\subsubsection{Key Suppliers}
+\textbf{Technology Providers:}
 \begin{itemize}
-    \item \textbf{Technology Providers:}
-    \begin{itemize}
-        \item Google (Gemini API)
-        \item OpenAI (potential GPT integration)
-        \item Cloud service providers
-        \item \{TBA - Other technology suppliers\}
-    \end{itemize}
-    \item \textbf{Content Suppliers:}
-    \begin{itemize}
-        \item \{TBA - Educational content providers\}
-        \item \{TBA - Textbook publishers (for reference)\}
-        \item \{TBA - Subject matter experts\}
-    \end{itemize}
+    \item \textbf{Google:} Gemini API and Google Cloud Platform (GCP) services
+    \item \textbf{OpenAI:} GPT-4 series as backup and comparison models
+    \item \textbf{AWS:} Alternative cloud infrastructure provider
 \end{itemize}
 
-\textbf{Strategic Partners:}
+\textbf{Content Development:}
 \begin{itemize}
-    \item \{TBA - Educational institutions\}
-    \item \{TBA - Teacher training organizations\}
-    \item \{TBA - EdTech companies\}
-    \item \{TBA - Distribution partners\}
+    \item \textbf{Educational Experts:} Teachers, lecturers, and education specialists working as freelance collaborators to build and review educational content
+    \item \textbf{Subject Matter Experts:} Specialists in mathematics, physics, chemistry, and other subjects for content validation
 \end{itemize}
 
-\textbf{Partnership Management:}
+\subsubsection{Strategic Partners}
+\textbf{Educational Institutions:}
 \begin{itemize}
-    \item \{TBA - Partner selection criteria\}
-    \item \{TBA - Contract management\}
-    \item \{TBA - Performance monitoring\}
-    \item \{TBA - Relationship maintenance\}
+    \item \textbf{Pioneer Schools:} Partnerships with technology-forward high schools and universities (e.g., FPT Schools, Vinschool, RMIT University, Fulbright University) for pilot programs
+    \item \textbf{Teacher Training Centers:} Collaboration for professional development and feedback collection
+\end{itemize}
+
+\textbf{Technology Partners:}
+\begin{itemize}
+    \item \textbf{Non-competing EdTech Companies:} Cross-integration with Learning Management Systems (LMS) or language learning applications
+    \item \textbf{Educational Technology Distributors:} Partners for market expansion and institutional sales
+\end{itemize}
+
+\subsubsection{Partner Management}
+\textbf{Service Level Agreements (SLAs):}
+\begin{itemize}
+    \item Clear SLAs with technology providers ensuring 99.9\% uptime
+    \item Response time commitments for technical support
+    \item Data security and privacy compliance requirements
+\end{itemize}
+
+\textbf{Partnership Evaluation:}
+\begin{itemize}
+    \item Quarterly performance reviews with educational partners
+    \item Regular feedback collection and improvement planning
+    \item Annual strategic partnership assessments
+    \item Continuous monitoring of partner satisfaction and mutual value creation
 \end{itemize}

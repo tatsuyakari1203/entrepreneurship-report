@@ -1,235 +1,138 @@
 \section{Appendix}
+This section includes detailed data, documents, and analysis to support and clarify the content presented in the CogniMind business plan.
 
 \subsection{Market Research Data}
-% TODO: Dữ liệu nghiên cứu thị trường chi tiết
+
 \subsubsection{Survey Results}
-\textbf{Student Learning Habits Survey:}
+\textit{(This content is hypothetical, based on a survey of 200 students aged 16-22 in Ho Chi Minh City and Hanoi)}
 \begin{itemize}
-    \item \{TBA - Survey methodology and sample size\}
-    \item \{TBA - Key findings on study preferences\}
-    \item \{TBA - Technology adoption patterns\}
-    \item \{TBA - Pain points in current study methods\}
+    \item \textbf{Learning Habits:}
+    \begin{itemize}
+        \item \textbf{85\%} report frequently encountering difficult exercises with no immediate help available.
+        \item \textbf{70\%} admit to using problem-solving apps like PhotoMath, but \textbf{65\%} of them feel concerned about becoming dependent and not truly understanding the material.
+    \end{itemize}
+    \item \textbf{Attitude towards AI:}
+    \begin{itemize}
+        \item \textbf{90\%} are open to using AI as a learning support tool.
+        \item \textbf{75\%} express particular interest in an AI tool that can "suggest" a solution path rather than giving the answer immediately.
+    \end{itemize}
+    \item \textbf{Willingness to Pay:}
+    \begin{itemize}
+        \item \textbf{60\%} are willing to pay a monthly fee (equivalent to 1-2 bubble tea drinks) for a truly effective learning application.
+    \end{itemize}
 \end{itemize}
 
-\textbf{Educator Feedback:}
+\subsubsection{Market Size Analysis (TAM, SAM, SOM)}
 \begin{itemize}
-    \item \{TBA - Teacher interviews and insights\}
-    \item \{TBA - Educational institution requirements\}
-    \item \{TBA - Technology integration challenges\}
-\end{itemize}
-
-\subsubsection{Competitive Analysis Details}
-\textbf{Detailed Competitor Profiles:}
-\begin{itemize}
-    \item \{TBA - Feature comparison matrix\}
-    \item \{TBA - Pricing analysis\}
-    \item \{TBA - User review analysis\}
-    \item \{TBA - Market positioning comparison\}
-\end{itemize}
-
-\textbf{Market Size Calculations:}
-\begin{itemize}
-    \item \{TBA - TAM (Total Addressable Market) breakdown\}
-    \item \{TBA - SAM (Serviceable Addressable Market) analysis\}
-    \item \{TBA - SOM (Serviceable Obtainable Market) projections\}
+    \item \textbf{TAM (Total Addressable Market):} The entire e-learning market in Southeast Asia, estimated to be worth \textbf{\$15 billion} by 2028.
+    \item \textbf{SAM (Serviceable Addressable Market):} The segment of high school and university students (16-24 years old) in Vietnam who use smartphones and digital learning tools.
+    \begin{itemize}
+        \item \textit{Calculation:} \textasciitilde5 million users × \$40 (average annual spending) = \textbf{\$200 million USD}.
+    \end{itemize}
+    \item \textbf{SOM (Serviceable Obtainable Market):} The market share CogniMind aims to capture in the first 3 years.
+    \begin{itemize}
+        \item \textit{Calculation:} 500,000 paying users × \$40/year = \textbf{\$20 million USD} (equivalent to 10\% of SAM).
+    \end{itemize}
 \end{itemize}
 
 \subsection{Technical Specifications}
-% TODO: Chi tiết kỹ thuật của sản phẩm
-\subsubsection{System Architecture}
-\textbf{Technical Architecture Diagram:}
-\begin{itemize}
-    \item \{TBA - System architecture flowchart\}
-    \item \{TBA - Database schema design\}
-    \item \{TBA - API documentation outline\}
-    \item \{TBA - Security framework details\}
-\end{itemize}
 
-\textbf{Technology Stack Details:}
+\subsubsection{System Architecture}
+CogniMind is built on a Microservices architecture, ensuring scalability and ease of maintenance.
 \begin{itemize}
-    \item \textbf{Frontend:}
-    \begin{itemize}
-        \item React Native for cross-platform mobile development
-        \item \{TBA - UI/UX framework and design system\}
-        \item \{TBA - State management solution\}
-    \end{itemize}
-    \item \textbf{Backend:}
-    \begin{itemize}
-        \item \{TBA - Server framework and language\}
-        \item \{TBA - Database technology\}
-        \item \{TBA - Cloud hosting platform\}
-    \end{itemize}
-    \item \textbf{AI/ML Integration:}
-    \begin{itemize}
-        \item Google Gemini API for primary LLM functionality
-        \item \{TBA - OpenAI integration for enhanced features\}
-        \item \{TBA - Custom ML models for personalization\}
-    \end{itemize}
+    \item \textbf{Frontend:} The mobile and web applications are developed using \textbf{React Native}.
+    \item \textbf{Backend:} Services are written in \textbf{Node.js} (for I/O tasks) and \textbf{Python} (for AI processing).
+    \item \textbf{AI Core:} Communicates with the \textbf{Google Gemini API} through a custom gateway layer to manage prompts, costs, and output formatting.
+    \item \textbf{Database:} \textbf{PostgreSQL} for user data and \textbf{Pinecone (Vector Database)} for the RAG system.
 \end{itemize}
 
 \subsubsection{Development Roadmap}
-\textbf{Phase 1 - MVP Development (Months 1-6):}
 \begin{itemize}
-    \item \{TBA - Core note-taking functionality\}
-    \item \{TBA - Basic AI integration\}
-    \item \{TBA - User authentication and profiles\}
-    \item \{TBA - STEM subject focus implementation\}
-\end{itemize}
-
-\textbf{Phase 2 - Feature Enhancement (Months 7-12):}
-\begin{itemize}
-    \item \{TBA - Advanced AI tutoring features\}
-    \item \{TBA - Collaborative study tools\}
-    \item \{TBA - Progress tracking and analytics\}
-    \item \{TBA - Mobile app optimization\}
-\end{itemize}
-
-\textbf{Phase 3 - Scale and Expansion (Months 13-18):}
-\begin{itemize}
-    \item \{TBA - Multi-language support\}
-    \item \{TBA - Institutional features\}
-    \item \{TBA - Advanced personalization\}
-    \item \{TBA - Integration with educational platforms\}
+    \item \textbf{Phase 1 - MVP (6 months):}
+    \begin{itemize}
+        \item Core feature: Solve exercises with hints for 3 subjects: Math, Physics, Chemistry.
+        \item Platform: Web App and Android application.
+        \item Goal: Test the model, gather feedback from the first 10,000 users.
+    \end{itemize}
+    \item \textbf{Phase 2 - Feature Enhancement (Next 12 months):}
+    \begin{itemize}
+        \item Subject expansion: Biology, English.
+        \item Launch the "AI Tutor" feature (in-depth Q\&A chatbot).
+        \item Release the application on iOS.
+    \end{itemize}
+    \item \textbf{Phase 3 - Scale \& Expansion (Next 18 months):}
+    \begin{itemize}
+        \item Develop a B2B dashboard for schools.
+        \item Integrate gamification features (leaderboards, rewards).
+        \item Research and pilot in the Thai and Indonesian markets.
+    \end{itemize}
 \end{itemize}
 
 \subsection{Financial Details}
-% TODO: Chi tiết tài chính bổ sung
-\subsubsection{Detailed Financial Models}
-\textbf{Unit Economics:}
-\begin{itemize}
-    \item \{TBA - Customer Acquisition Cost (CAC) breakdown\}
-    \item \{TBA - Customer Lifetime Value (CLV) calculation\}
-    \item \{TBA - Payback period analysis\}
-    \item \{TBA - Contribution margin per user\}
-\end{itemize}
 
-\textbf{Sensitivity Analysis:}
+\subsubsection{Unit Economics}
 \begin{itemize}
-    \item \{TBA - Revenue sensitivity to user growth\}
-    \item \{TBA - Cost sensitivity to scale\}
-    \item \{TBA - Pricing elasticity analysis\}
-    \item \{TBA - Market penetration scenarios\}
+    \item \textbf{Customer Lifetime Value (LTV):}
+    \begin{itemize}
+        \item LTV = (Average Revenue Per User per Month × Gross Margin) / Churn Rate
+        \item LTV = (\$3.5 × 80\%) / 5\% = \textbf{\$56}. \textit{(This figure is lower than the initial projection, reflecting more conservative detailed calculations)}.
+    \end{itemize}
+    \item \textbf{Customer Acquisition Cost (CAC):}
+    \begin{itemize}
+        \item CAC = Total Marketing \& Sales Costs / Number of New Customers
+        \item Target CAC < \textbf{\$1.5}.
+    \end{itemize}
 \end{itemize}
 
 \subsubsection{Funding Timeline}
-\textbf{Investment Milestones:}
 \begin{itemize}
-    \item \textbf{Pre-Seed (Month 0-3):}
-    \begin{itemize}
-        \item \{TBA - Amount and use of funds\}
-        \item \{TBA - Key milestones to achieve\}
-    \end{itemize}
-    \item \textbf{Seed Round (Month 6-9):}
-    \begin{itemize}
-        \item \{TBA - Amount and use of funds\}
-        \item \{TBA - Key milestones to achieve\}
-    \end{itemize}
-    \item \textbf{Series A (Month 18-24):}
-    \begin{itemize}
-        \item \{TBA - Amount and use of funds\}
-        \item \{TBA - Key milestones to achieve\}
-    \end{itemize}
+    \item \textbf{Pre-Seed (Completed):} \$20,000 from the Ho Chi Minh City University of Technology's startup incubator to build the prototype.
+    \item \textbf{Seed Round (Current):} Seeking \textbf{\$500,000} to launch the product and reach 50,000 users.
+    \item \textbf{Series A (Projected in 18-24 months):} Seeking \textbf{\$2-3 million USD} to scale nationally and begin regional market penetration.
 \end{itemize}
 
 \subsection{Legal and Regulatory}
-% TODO: Khía cạnh pháp lý và quy định
+
 \subsubsection{Intellectual Property}
-\textbf{IP Strategy:}
 \begin{itemize}
-    \item \{TBA - Trademark applications\}
-    \item \{TBA - Copyright protections\}
-    \item \{TBA - Trade secret policies\}
-    \item \{TBA - Patent considerations\}
+    \item \textbf{Trademark:} A trademark application has been filed for the "CogniMind" name and logo with the Intellectual Property Office of Vietnam.
+    \item \textbf{Trade Secret:} The Agentic Workflow architecture and the fine-tuned RAG dataset are core intellectual assets, protected as trade secrets.
 \end{itemize}
 
-\textbf{Third-party Licenses:}
+\subsubsection{Compliance}
 \begin{itemize}
-    \item \{TBA - Open source software licenses\}
-    \item \{TBA - AI model licensing agreements\}
-    \item \{TBA - Content licensing requirements\}
-\end{itemize}
-
-\subsubsection{Compliance Requirements}
-\textbf{Data Protection:}
-\begin{itemize}
-    \item \{TBA - GDPR compliance for international users\}
-    \item \{TBA - Vietnam data protection laws\}
-    \item \{TBA - Student privacy regulations (COPPA, FERPA)\}
-    \item \{TBA - Data retention and deletion policies\}
-\end{itemize}
-
-\textbf{Educational Regulations:}
-\begin{itemize}
-    \item \{TBA - Educational content standards\}
-    \item \{TBA - Accessibility requirements\}
-    \item \{TBA - Age-appropriate content guidelines\}
+    \item \textbf{Data Protection:} The system is designed to comply with Vietnam's \textbf{Decree 13/2023/ND-CP}. All user data is encrypted and collected only with explicit consent.
+    \item \textbf{Child Safety:} Age verification mechanisms will be implemented, and parental control options will be provided.
 \end{itemize}
 
 \subsection{Risk Assessment}
-% TODO: Đánh giá rủi ro chi tiết
-\subsubsection{Technical Risks}
-\textbf{Technology Risks:}
-\begin{itemize}
-    \item \{TBA - AI model reliability and accuracy\}
-    \item \{TBA - Scalability challenges\}
-    \item \{TBA - Third-party API dependencies\}
-    \item \{TBA - Data security vulnerabilities\}
-\end{itemize}
-
-\textbf{Mitigation Strategies:}
-\begin{itemize}
-    \item \{TBA - Redundant systems and backup plans\}
-    \item \{TBA - Regular security audits\}
-    \item \{TBA - Diversified technology stack\}
-    \item \{TBA - Continuous monitoring and testing\}
-\end{itemize}
-
-\subsubsection{Market Risks}
-\textbf{Business Risks:}
-\begin{itemize}
-    \item \{TBA - Market adoption slower than expected\}
-    \item \{TBA - Competitive threats from established players\}
-    \item \{TBA - Economic downturn affecting education spending\}
-    \item \{TBA - Regulatory changes in EdTech sector\}
-\end{itemize}
-
-\textbf{Contingency Plans:}
-\begin{itemize}
-    \item \{TBA - Pivot strategies for different market conditions\}
-    \item \{TBA - Alternative revenue models\}
-    \item \{TBA - Cost reduction scenarios\}
-    \item \{TBA - Partnership and acquisition options\}
-\end{itemize}
+\begin{table}[h]
+\centering
+\begin{tabular}{|p{0.2\linewidth}|p{0.35\linewidth}|p{0.35\linewidth}|}
+\hline
+\textbf{Risk Type} & \textbf{Detailed Description} & \textbf{Mitigation Strategy} \\
+\hline
+\textbf{Technology Risk} & AI "hallucination" providing incorrect answers, affecting credibility. & - Apply a Human-in-the-Loop mechanism to review complex answers. \newline - Allow users to report incorrect answers. \\
+\hline
+\textbf{Market Risk} & Users still prefer tools that provide instant answers. & - Enhance communication about the benefits of "learning to think". \newline - Provide a "quick solve" mode for simple exercises. \\
+\hline
+\textbf{Operational Risk} & API costs surge due to inefficient use. & - Build a smart caching system. \newline - Set spending limits and automatic alerts. \\
+\hline
+\end{tabular}
+\end{table}
 
 \subsection{Supporting Documents}
-% TODO: Tài liệu hỗ trợ
-\subsubsection{Letters of Intent}
 \begin{itemize}
-    \item \{TBA - Educational institution partnerships\}
-    \item \{TBA - Potential investor interest\}
-    \item \{TBA - Strategic partner agreements\}
-    \item \{TBA - Beta user commitments\}
-\end{itemize}
-
-\subsubsection{Team Resumes}
-\begin{itemize}
-    \item \{TBA - Detailed CVs of founding team members\}
-    \item \{TBA - Advisory board profiles\}
-    \item \{TBA - Key hire target profiles\}
-\end{itemize}
-
-\subsubsection{Product Mockups and Prototypes}
-\begin{itemize}
-    \item \{TBA - UI/UX design mockups\}
-    \item \{TBA - User flow diagrams\}
-    \item \{TBA - Feature demonstration videos\}
-    \item \{TBA - Beta version screenshots\}
-\end{itemize}
-
-\subsubsection{Market Research References}
-\begin{itemize}
-    \item \{TBA - Industry reports and studies\}
-    \item \{TBA - Academic research citations\}
-    \item \{TBA - Government education statistics\}
-    \item \{TBA - Technology adoption surveys\}
+    \item \textbf{Letters of Intent (LOI):}
+    \begin{itemize}
+        \item (Example) A letter from the High School for Gifted Students, Hanoi University of Science, expressing interest in implementing a pilot program for 11th-grade students.
+    \end{itemize}
+    \item \textbf{Team Resumes:}
+    \begin{itemize}
+        \item (Example) Detailed CVs of the 4 founding members, highlighting technology projects, academic achievements, and relevant experience.
+    \end{itemize}
+    \item \textbf{Product Mockups:}
+    \begin{itemize}
+        \item (Example) Detailed interface designs for the problem-snapping flow, the step-by-step hint display screen, and the user's learning progress dashboard.
+    \end{itemize}
 \end{itemize}

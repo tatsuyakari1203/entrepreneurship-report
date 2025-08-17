@@ -228,3 +228,6 @@ Thumbs.db
 *#
 .#*
 .env
+
+# Python virtual environment
+/venv/
