@@ -1,0 +1,128 @@
+\section{Operation Plan}
+
+\subsection{Operational Workflow}
+% TODO: Sơ đồ quy trình các hoạt động chính
+\textbf{Key Process Flowchart:}
+\begin{itemize}
+    \item \textbf{Product Development:}
+    \begin{enumerate}
+        \item \{TBA - Requirements gathering\}
+        \item \{TBA - Design and prototyping\}
+        \item \{TBA - Development and testing\}
+        \item \{TBA - Deployment and monitoring\}
+    \end{enumerate}
+    \item \textbf{Service Delivery:}
+    \begin{enumerate}
+        \item \{TBA - User onboarding\}
+        \item \{TBA - AI tutoring service\}
+        \item \{TBA - Progress tracking\}
+        \item \{TBA - Performance optimization\}
+    \end{enumerate}
+    \item \textbf{Customer Support:}
+    \begin{enumerate}
+        \item \{TBA - Issue identification\}
+        \item \{TBA - Support ticket handling\}
+        \item \{TBA - Resolution and follow-up\}
+    \end{enumerate}
+\end{itemize}
+
+\subsection{Technology and Equipment}
+% Nội dung được di chuyển và mở rộng từ phần Resource trong chương Feasibility
+\subsubsection{GUI Framework}
+Notetaking app is an idea that has been done to death, as such, it is highly feasible. To cut down on
+ iteration time, we opt to use React Native (\url{https://reactnative.dev}) to be our Graphical User Interface
+ (GUI) framework. Based on the well-known web UI framework React with minor changes, coupled with extensive open-source
+ component library, we can cut down on time-to-MVP while simultaneously provide an interface in the browser or
+ Electron-based web apps without suffering from parallel technology stacks.
+
+\subsubsection{LLMs Infrastructure}
+The core technology behind the AI half of our notetaking app are the LLMs. We choose to roll with
+ Google's Gemini with possibility to expand to other providers such at OpenAI's GPT-* models. Both companies provide
+ API to interact with their LLMs under pay-as-you-go pricing model allowing for flexibility in cost. Furthermore,
+ having access to APIs allows us to tweak the system prompt (i.e., personality, tone of speech, etc.) according to our
+ need rather than being confined to the defaults. In addition, LLMs are no longer confined to text, they can
+ participate in agentic workflow, which we need to tailor the responses according to our and our customers' needs.
+
+\subsubsection{Content Development}
+Aiming for K-12 students, a thorny challenge is the acquisition of textbooks for refining
+ which is copyright. While the concepts being introduced in the textbooks are not copyrightable, the ways the concepts
+ are introduced are under the so-called Idea-Expression Dichotomy. To avoid copyright issues, we opt to use a method
+ similar to a clean room implementation: One person will be reading through standard issue MoET textbooks, noting down
+ the concepts being introduced and systemise them into a "skeleton"; another person will use reference other material
+ to repopulate and refine the skeleton into a so-called "graph of knowledge". Using this method, we can leverage the
+ existing "knowledge" embedded in the LLM itself while adding guard rails to prevent leakage of "higher knowledge",
+ i.e., \textbf{not} introducing trigonometry in guiding a user who has only learnt Pythagorean Theorem, etc. 
+
+ In later revisions, this can be expanded to include actual sample problems and solutions curated and created in-house
+ to further nudge the LLM into following the expected baseline method, with human-in-the-loop refinement through
+ collaboration with human field experts (teachers, lecturers, etc.) to further enhance the LLM's response.
+
+\subsubsection{Additional Technology Requirements}
+% TODO: Bổ sung các công nghệ và thiết bị cần thiết khác
+\textbf{Development Tools:}
+\begin{itemize}
+    \item \{TBA - IDE và development environment\}
+    \item \{TBA - Version control system (Git)\}
+    \item \{TBA - CI/CD pipeline\}
+    \item \{TBA - Testing frameworks\}
+\end{itemize}
+
+\textbf{Infrastructure:}
+\begin{itemize}
+    \item \{TBA - Cloud hosting (AWS/GCP/Azure)\}
+    \item \{TBA - Database systems\}
+    \item \{TBA - CDN for content delivery\}
+    \item \{TBA - Monitoring and analytics tools\}
+\end{itemize}
+
+\textbf{Security:}
+\begin{itemize}
+    \item \{TBA - Data encryption\}
+    \item \{TBA - User authentication systems\}
+    \item \{TBA - Privacy compliance tools\}
+\end{itemize}
+
+\subsection{Location}
+% TODO: Mô tả văn phòng, nhà máy hoặc cơ sở vật chất
+\textbf{Physical Facilities:}
+\begin{itemize}
+    \item \{TBA - Office location and setup\}
+    \item \{TBA - Remote work capabilities\}
+    \item \{TBA - Meeting and collaboration spaces\}
+    \item \{TBA - Equipment and hardware requirements\}
+\end{itemize}
+
+\subsection{Supply Chain and Partner Management}
+% TODO: Nhà cung cấp chính và đối tác chiến lược
+\textbf{Key Suppliers:}
+\begin{itemize}
+    \item \textbf{Technology Providers:}
+    \begin{itemize}
+        \item Google (Gemini API)
+        \item OpenAI (potential GPT integration)
+        \item Cloud service providers
+        \item \{TBA - Other technology suppliers\}
+    \end{itemize}
+    \item \textbf{Content Suppliers:}
+    \begin{itemize}
+        \item \{TBA - Educational content providers\}
+        \item \{TBA - Textbook publishers (for reference)\}
+        \item \{TBA - Subject matter experts\}
+    \end{itemize}
+\end{itemize}
+
+\textbf{Strategic Partners:}
+\begin{itemize}
+    \item \{TBA - Educational institutions\}
+    \item \{TBA - Teacher training organizations\}
+    \item \{TBA - EdTech companies\}
+    \item \{TBA - Distribution partners\}
+\end{itemize}
+
+\textbf{Partnership Management:}
+\begin{itemize}
+    \item \{TBA - Partner selection criteria\}
+    \item \{TBA - Contract management\}
+    \item \{TBA - Performance monitoring\}
+    \item \{TBA - Relationship maintenance\}
+\end{itemize}
